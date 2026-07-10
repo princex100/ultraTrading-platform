@@ -21,6 +21,8 @@ import Stock from './pages/Stock';
 import About from './pages/About';
 import Docs from './pages/Docs';
 import NotFound from './pages/NotFound';
+import Wallet from './pages/Wallet';
+import Holdings from './pages/Holdings';
 import {setStocks} from '../src/redux/stocksclice.js'
 import Notification from './components/Notification';
 // import { socket } from './services/socket.js';
@@ -162,12 +164,14 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/holdings" element={<Holdings />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/stock/:id" element={<Stock />} />
           <Route path="/about" element={<About />} />
           <Route path="/docs" element={<Docs />} />
+          <Route path="/wallet" element={<Wallet />} />
         </Route>
 
         {/* Catch all */}

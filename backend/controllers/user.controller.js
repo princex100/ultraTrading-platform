@@ -157,8 +157,8 @@ export const registerUser = asyncHandler(async (req, res) => {
         age: 18,
         balance: 100000,
         phone: "0000000000",
-        catagory: "Beginner",
-        level: 1,
+        catagory: "Beginner Trader",
+        level: "Level 1",
         description: "New Trader"
     });
 
