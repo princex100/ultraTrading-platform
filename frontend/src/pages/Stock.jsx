@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axiosInstance from '../services/axios';
 import { Loader2 } from 'lucide-react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
+import { setUser } from '../redux/userSlice';
 
 const Stock = () => {
 
@@ -14,34 +15,16 @@ const Stock = () => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [buyQty, setBuyQty] = useState(1);
+  const [buying, setBuying] = useState(false);
 
   const navigate=useNavigate()
+  const dispatch = useDispatch();
 
 
   const handlewatchlist=async()=>{
-    
-    if(!user){
-      toast.error("please login to add stock to watchlist")
-      navigate('/login')
-      return ;
-    }
-
-    try{
-      
-      const res = await axiosInstance.post(`/watchlist/add`, { 
-        stockId, 
-        userId: user?._id 
-      });
-      
-      toast.success(res.data.message,{id:"watchlist-add-success"});
-
-    }catch(err){
-
-      console.log(err);
-      toast.error('Failed to add stock to watchlist',{id:"watchlist-add-fail"});
-
-    }
-
+    // Watchlist is intentionally disabled silently
+    return;
   }
 
 
@@ -139,11 +122,26 @@ const Stock = () => {
 
 
       {/* Action Buttons */}
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
 
-        <button className="flex-1 md:flex-none px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors shadow-sm">
-          Buy {stock.symbol}
-        </button>
+        <div className="flex items-center gap-3 flex-1">
+          <label className="text-sm font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">Qty:</label>
+          <input
+            type="number"
+            min="1"
+            value={buyQty}
+            onChange={(e) => setBuyQty(Math.max(1, parseInt(e.target.value) || 1))}
+            className="w-20 px-3 py-2 bg-white dark:bg-[#252536] border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white text-center focus:ring-2 focus:ring-blue-500 outline-none"
+          />
+          <button
+            onClick={() => {
+              // Buy is intentionally disabled silently
+            }}
+            className="flex-1 md:flex-none px-8 py-3 bg-green-600 hover:bg-green-700 disabled:opacity-60 text-white font-semibold rounded-lg transition-colors shadow-sm"
+          >
+            Buy {stock.symbol}
+          </button>
+        </div>
 
         <button onClick={()=>handlewatchlist()} className="flex-1 md:flex-none px-8 py-3 bg-[#0a66c2] hover:bg-[#004182] text-white font-semibold rounded-lg transition-colors shadow-sm">
           Add to Watchlist

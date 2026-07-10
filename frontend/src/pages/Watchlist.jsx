@@ -14,20 +14,10 @@ const Watchlist = () => {
   useEffect(() => {
     const fetchwatchlist = async () => {
       try {
-         const res = await axiosInstance.get("/watchlist");
-
-
-         if (res && res.data && res.data.data) {
-          setWatchlistArray(res.data.data);
-         }
-
-
-         toast.success(res.data.message, { id: "watchlist-fetch-success" });
-
+         // Watchlist is intentionally disabled silently
+         // const res = await axiosInstance.get("/watchlist");
       } catch (error) {
-
-        toast.error(error?.data?.message || "Watchlist not found.");
-        
+         // toast.error(error.message || "Watchlist not found.");
       }
     };
 

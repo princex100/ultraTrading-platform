@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Image as ImageIcon } from 'lucide-react';
+import { Image as ImageIcon, X, Newspaper } from 'lucide-react';
 import axiosInstance from '../services/axios';
 
-const NewsPanel = () => {
+const NewsPanel = ({ onClose }) => {
   const [newsItems, setNewsItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -82,10 +82,19 @@ const NewsPanel = () => {
     <div className="bg-white dark:bg-[#1e1e2d] rounded-xl border border-gray-200 dark:border-gray-800 p-3 sm:p-4 shadow-sm transition-colors duration-200 flex-1 flex flex-col min-h-0">
       
       {/* Top Heading */}
-      <h2 className="font-bold text-base mb-4 flex-shrink-0 flex items-center justify-between text-gray-900 dark:text-gray-100">
-        Live Market News
-        <span className="w-4 h-4 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded text-[10px] flex items-center justify-center font-bold">i</span>
-      </h2>
+      <div className="flex items-center justify-between mb-4 flex-shrink-0">
+        <h2 className="font-bold text-base flex items-center gap-2 text-gray-900 dark:text-gray-100">
+          Live Market News
+          <span className="w-4 h-4 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded text-[10px] flex items-center justify-center font-bold">i</span>
+        </h2>
+        <button 
+          onClick={onClose}
+          className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+          title="Close News"
+        >
+          <X size={18} />
+        </button>
+      </div>
       
       {loading ? (
         <div className="flex-1 flex justify-center items-center py-4">

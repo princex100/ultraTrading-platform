@@ -1,11 +1,17 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
 import SubNavbar from '../components/navbar/SubNavbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import NewsPanel from '../components/NewsPanel';
-import Chatbot from '../components/Chatbot';
+// import Chatbot from '../components/Chatbot';
+import { Newspaper } from 'lucide-react';
+import MarketPerformanceChart from '../components/MarketPerformanceChart';
+import VolumeAnalysisChart from '../components/VolumeAnalysisChart';
 
 const MainLayout = () => {
+  const [isNewsOpen, setIsNewsOpen] = useState(true);
+
   return (
     <div className="min-h-screen bg-[#f3f2ef] dark:bg-[#111111] flex flex-col relative">
       <Navbar />
@@ -20,8 +26,8 @@ const MainLayout = () => {
               <h2 className="font-semibold text-sm mb-2 text-gray-900 dark:text-gray-100 w-full text-left">
                 Market Performance
               </h2>
-              <div className="flex-grow flex items-center justify-center border-2 border-dashed border-gray-200 dark:border-gray-800 rounded-lg bg-gray-50 dark:bg-[#1a1a24] text-gray-400 dark:text-gray-500 text-sm">
-                [Line Chart Placeholder]
+              <div className="flex-grow flex items-center justify-center rounded-lg bg-transparent">
+                <MarketPerformanceChart />
               </div>
             </div>
 
@@ -33,21 +39,22 @@ const MainLayout = () => {
               <h2 className="font-semibold text-sm mb-2 text-gray-900 dark:text-gray-100 w-full text-left">
                 Volume Analysis
               </h2>
-              <div className="flex-grow flex items-center justify-center border-2 border-dashed border-gray-200 dark:border-gray-800 rounded-lg bg-gray-50 dark:bg-[#1a1a24] text-gray-400 dark:text-gray-500 text-sm">
-                [Bar Chart Placeholder]
+              <div className="flex-grow flex items-center justify-center rounded-lg bg-transparent">
+                <VolumeAnalysisChart />
               </div>
             </div>
             
           </div>
           
           {/* Main Content Area (Stocks listing, etc.) */}
-          <div className="flex-grow min-w-0 lg:max-w-2xl xl:max-w-3xl flex flex-col gap-4">
+          <div className={`flex-grow min-w-0 flex flex-col gap-4 transition-all duration-300 ${isNewsOpen ? 'lg:max-w-2xl xl:max-w-3xl' : 'w-full'}`}>
             <Outlet />
           </div>
           
           {/* Right Sidebar Area (News + Copyright) */}
-          <div className="hidden md:flex w-full md:w-[350px] lg:w-[400px] flex-shrink-0 flex-col gap-4 sticky top-20 h-[calc(100vh-100px)]">
-            <NewsPanel />
+          {isNewsOpen && (
+            <div className="hidden md:flex w-full md:w-[350px] lg:w-[400px] flex-shrink-0 flex-col gap-4 sticky top-20 h-[calc(100vh-100px)]">
+              <NewsPanel onClose={() => setIsNewsOpen(false)} />
             
             {/* Copyright / Credits (Approx 1.5 inches / ~144px height) */}
             <div className="h-32 bg-transparent text-gray-500 dark:text-gray-500 text-xs text-center flex flex-col items-center justify-end pb-6 border-t border-gray-200 dark:border-gray-800 flex-shrink-0">
@@ -57,9 +64,22 @@ const MainLayout = () => {
               <p className="text-[10px]">Built with precision for simulated trading.</p>
             </div>
           </div>
+          )}
         </div>
       </main>
-      <Chatbot />
+
+      {/* Floating News Button when panel is closed */}
+      {!isNewsOpen && (
+        <button
+          onClick={() => setIsNewsOpen(true)}
+          className="fixed bottom-[90px] right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-105 hidden md:flex items-center justify-center"
+          title="Open Market News"
+        >
+          <Newspaper size={28} />
+        </button>
+      )}
+
+      {/* <Chatbot /> */}
     </div>
   );
 };

@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  // TODO: Add credentials config if needed
+  withCredentials: true,
 });
 
 
