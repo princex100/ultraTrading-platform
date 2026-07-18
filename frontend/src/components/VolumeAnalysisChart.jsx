@@ -51,30 +51,8 @@ const VolumeAnalysisChart = () => {
   const colorNegative = isDark ? '#ef4444' : '#dc2626'; // red-500 : red-600
 
   return (
-    <div className="w-full relative">
-      <ResponsiveContainer width="100%" height={180}>
-        <BarChart data={data} margin={{ top: 10, right: 10, left: -25, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={isDark ? '#334155' : '#e2e8f0'} />
-          <XAxis 
-            dataKey="symbol" 
-            axisLine={false}
-            tickLine={false}
-            tick={{ fontSize: 10, fill: isDark ? '#94a3b8' : '#64748b', fontWeight: 'bold' }}
-          />
-          <YAxis 
-            axisLine={false}
-            tickLine={false}
-            tick={{ fontSize: 10, fill: isDark ? '#94a3b8' : '#64748b' }}
-            tickFormatter={(value) => `${(value / 1000).toFixed(0)}k`}
-          />
-          <Tooltip cursor={{ fill: isDark ? '#334155' : '#f1f5f9', opacity: 0.4 }} content={<CustomTooltip />} />
-          <Bar dataKey="volume" radius={[4, 4, 0, 0]}>
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.isPositive ? colorPositive : colorNegative} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+    <div>
+       volume Analysis chart
     </div>
   );
 };

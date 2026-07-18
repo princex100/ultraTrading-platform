@@ -93,6 +93,12 @@ function App() {
     const fetchCurrentUser = async () => {
 
       try {
+        const hasSavedSession = localStorage.getItem('accessToken') || localStorage.getItem('refreshToken');
+
+        if (!hasSavedSession) {
+          dispatch(logout());
+          return;
+        }
 
         const response = await axiosInstance.get('/users/current-user');
         const responseData = response.data;
@@ -105,7 +111,9 @@ function App() {
       } catch (error) {
 
         dispatch(logout());
-        console.error(error);
+        if (error?.response?.status !== 401 && error?.message !== 'Session expired. Please login again.') {
+          console.error(error);
+        }
 
       } finally {
 
