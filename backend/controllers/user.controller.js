@@ -369,3 +369,54 @@ const buyStock = asyncHandler(async (req, res) => {
         .status(200)
         .json(new ApiResponse(200, "Stock bought successfully"));
 });
+
+
+
+import {oauth2Client} from "google-auth-library"
+export const googleOauth=asyncHandler(async(req,res,next)=>{
+
+    const token=req.body.token;
+
+    if(!token){
+        throw new ApiError(400,"Token not received")
+    }
+
+    const client=new oauth2Client(process.env.GOOGLE_CLIENT_ID);
+
+    const ticket=await client.verifyIdToken({
+        idToken:token,
+        audience:process.env.GOOGLE_CLIENT_ID
+    })
+
+    const payload=ticket.getPayload();
+
+    const {email,name,picture}=payload;
+
+    if(!email){
+        throw new ApiError(400,"Email not found")
+    }
+
+    if(!payload.email_verified){
+        throw new ApiError(400,"Email not verified")
+    }
+
+    const user=await User.findOne({email});
+
+    if(!user){
+        user=await User.create({
+            email,
+            name,
+            avatar:picture,
+            isVerified:true,
+        })
+
+        
+    }
+   
+
+    
+
+
+
+    
+})

@@ -9,6 +9,16 @@ dotenv.config({
 
 const PORT = process.env.PORT || 5000;
 
+server.on("error", (err) => {
+    if (err.code === "EADDRINUSE") {
+        console.error(`Port ${PORT} is already in use. Stop the existing backend process or set a different PORT in .env.`);
+        process.exit(1);
+    }
+
+    console.error("Server failed to start:", err);
+    process.exit(1);
+});
+
 connectDB()
 .then(() => {
 

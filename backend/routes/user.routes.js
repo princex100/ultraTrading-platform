@@ -10,6 +10,7 @@ router.post("/register", registerUser);
 router.post("/verify-email", verifyEmail);
 router.post("/login", login);
 router.post("/refresh-token", refreshAccessToken);
+router.post("/google",googleAuth)
 
 // Secure routes
 router.get("/current-user", verifyJWT, getCurrentUser);
