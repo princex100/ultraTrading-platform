@@ -134,10 +134,10 @@ const sendVerificationEmail = async (email, name) => {
 
 export const registerUser = asyncHandler(async (req, res) => {
 
-    const { name, email, password } = req.body;
+    const { name, email, password, phone, countryCode } = req.body;
 
 
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !phone) {
         throw new ApiError(400, "All fields are required");
     }
 
@@ -154,9 +154,10 @@ export const registerUser = asyncHandler(async (req, res) => {
         name, 
         email, 
         password,
+        phone,
+        countryCode: countryCode || "+91",
         age: 18,
         balance: 100000,
-        phone: "0000000000",
         catagory: "Beginner Trader",
         level: "Level 1",
         description: "New Trader"
@@ -266,9 +267,27 @@ export const login = asyncHandler(async (req, res) => {
 
 
 export const getCurrentUser = asyncHandler(async (req, res) => {
+
+    if(!req){
+        throw new ApiError(401,"Unauthorized request")
+    }
+    const accessToken=req.cookies.accessToken;
+
+    if(!accessToken){
+        throw new ApiError(401,"Unauthorized request")
+    }
+    
+    const decodedAccessToken=jwt.verify(accessToken,process.env.ACCESS_TOKEN_SECRET);
+    const user=await User.findById(decodedAccessToken?._id);
+
+    if(!user){
+        throw new ApiError(404,"User not found")
+    }
+    
+
     return res
         .status(200)
-        .json(new ApiResponse(200, req.user, "Current user fetched successfully"));
+        .json(new ApiResponse(200, user, "Current user fetched successfully"));
 });
 
 import jwt from "jsonwebtoken";
@@ -372,7 +391,9 @@ const buyStock = asyncHandler(async (req, res) => {
 
 
 
-import {oauth2Client} from "google-auth-library"
+import pkg from "google-auth-library";
+const { OAuth2Client } = pkg;
+
 export const googleOauth=asyncHandler(async(req,res,next)=>{
 
     const token=req.body.token;
@@ -381,7 +402,7 @@ export const googleOauth=asyncHandler(async(req,res,next)=>{
         throw new ApiError(400,"Token not received")
     }
 
-    const client=new oauth2Client(process.env.GOOGLE_CLIENT_ID);
+    const client=new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
     const ticket=await client.verifyIdToken({
         idToken:token,
@@ -400,23 +421,44 @@ export const googleOauth=asyncHandler(async(req,res,next)=>{
         throw new ApiError(400,"Email not verified")
     }
 
-    const user=await User.findOne({email});
+    let user=await User.findOne({email});
 
     if(!user){
         user=await User.create({
             email,
             name,
+            password: "oauth_dummy_password",
             avatar:picture,
             isVerified:true,
+            phone: "0000000000",
+            countryCode: "+91",
+            age: 18,
+            balance: 100000,
+            catagory: "Beginner Trader",
+            level: "Level 1",
+            description: "New Trader"
         })
 
-        
+        await user.save({ validateBeforeSave: false })
     }
-   
 
-    
+    const {accessToken,refreshToken} = await generateAcessAndRefreshTokens(user._id)
 
+    const options={
+        httpOnly:true,
+        secure:true,
+        sameSite:"none"
+    }
 
+    const userResponse = user.toObject ? user.toObject() : user;
+    userResponse.accessToken = accessToken;
+    userResponse.refreshToken = refreshToken;
 
-    
+    return res
+        .status(200)
+        .cookie("accessToken", accessToken, options)
+        .cookie("refreshToken", refreshToken, options)
+        .json(
+            new ApiResponse(200, userResponse, "User logged in successfully")
+        );
 })

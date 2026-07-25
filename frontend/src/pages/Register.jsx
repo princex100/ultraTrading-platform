@@ -5,6 +5,11 @@ import axiosInstance from '../services/axios';
 import toast from 'react-hot-toast';
 import { GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import { setUser } from '../redux/userSlice';
+import PI from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
+const PhoneInput = PI.default || PI;
 
 
 const Register = () => {
@@ -19,6 +24,7 @@ const Register = () => {
   const [error, setError] = useState(null);
   const [msg, setMsg] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [countryCode,setCountryCode]=useState("")
 
 
   const handleSubmit = async (e) => {
@@ -36,6 +42,7 @@ const Register = () => {
         name,
         email,
         phone,
+        countryCode,
         password
       });
 
@@ -48,7 +55,7 @@ const Register = () => {
 
     } catch (err) {
 
-      setError(err.response?.data?.message || "Failed to register");
+      toast.error(err.response?.data?.message || "Failed to register");
 
     } finally {
 
@@ -61,21 +68,29 @@ const Register = () => {
 
   const handleGoogleAuth = async(data) => {
     // Placeholder for Google OAuth logic
+    setLoading(true);
+    try {
+      const googleToken=data.credential
 
-    const googleToken=data.credential
+      const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/google`,{
+        token:googleToken
+      })
 
-    const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google`,{
-      token:googleToken
-    })
-
-    if(res){
-      dispatch(res.data.user)
-      toast.success("login successfull")
-    }
-    else{
+      if(res.status===200){
+        dispatch(setUser(res.data.data))
+        // localStorage.setItem("accessToken",res.data.data.accessToken)
+        // localStorage.setItem("refreshToken",res.data.data.refreshToken)
+        toast.success("login successfull")
+        navigate('/')
+      }
+      else{
+        toast.error("google authentication failed")
+        setLoading(false)
+      }
+    } catch (error) {
       toast.error("google authentication failed")
+      setLoading(false)
     }
-    
   };
 
   return (
@@ -136,10 +151,11 @@ const Register = () => {
                   name="name"
                   type="text"
                   required
+                  autoComplete="off"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 placeholder-gray-400 text-gray-900 dark:text-gray-100 bg-white dark:bg-[#2b2b40] rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors duration-200"
-                  placeholder="John Doe"
+                  placeholder="Enter full name"
                 />
               </div>
               
@@ -149,23 +165,35 @@ const Register = () => {
                   name="email"
                   type="email"
                   required
+                  autoComplete="off"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 placeholder-gray-400 text-gray-900 dark:text-gray-100 bg-white dark:bg-[#2b2b40] rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors duration-200"
-                  placeholder="john@example.com"
+                  placeholder="Enter email address"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
-                <input
-                  name="phone"
-                  type="text"
-                  required
+                <PhoneInput
+                  country={'in'}
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 placeholder-gray-400 text-gray-900 dark:text-gray-100 bg-white dark:bg-[#2b2b40] rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors duration-200"
-                  placeholder="+1 (555) 000-0000"
+                  onChange={(value, country) => {
+                    setPhone(value);
+                    if (country && country.dialCode) {
+                      setCountryCode(`+${country.dialCode}`);
+                    }
+                  }}
+                  containerClass="!w-full"
+                  inputClass="!w-full !h-[40px] !text-gray-900 dark:!text-gray-100 !bg-white dark:!bg-[#2b2b40] !border !border-gray-300 dark:!border-gray-700 !rounded-lg focus:!ring-blue-500 focus:!border-blue-500 transition-colors duration-200"
+                  buttonClass="!bg-transparent !border-r-0 !border-gray-300 dark:!border-gray-700 !rounded-l-lg hover:!bg-gray-100 dark:hover:!bg-[#1e1e2d] transition-colors"
+                  dropdownClass="!bg-white dark:!bg-[#2b2b40] !text-gray-900 dark:!text-gray-100 !border-gray-300 dark:!border-gray-700"
+                  searchClass="!bg-white dark:!bg-[#1e1e2d] !text-gray-900 dark:!text-gray-100"
+                  inputProps={{
+                    name: 'phone',
+                    required: true,
+                    placeholder: 'Enter phone number'
+                  }}
                 />
               </div>
               
@@ -175,10 +203,11 @@ const Register = () => {
                   name="password"
                   type="password"
                   required
+                  autoComplete="new-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 placeholder-gray-400 text-gray-900 dark:text-gray-100 bg-white dark:bg-[#2b2b40] rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors duration-200"
-                  placeholder="••••••••"
+                  placeholder="Enter password"
                 />
               </div>
 
@@ -196,7 +225,7 @@ const Register = () => {
                   onSuccess={(data)=>{
                       handleGoogleAuth(data)
                   }}
-                  onError={toast.error("google authentication failed")}
+                  onError={() => toast.error("google authentication failed")}
                 />
               </div>
 

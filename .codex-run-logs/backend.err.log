@@ -1,0 +1,534 @@
+Global error handler caught:  TypeError: fetch failed
+    at node:internal/deps/undici/undici:14902:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/LENOVO/OneDrive/Desktop/PaperTradingPlatform/backend/controllers/news.controller.js:16:22 {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 2606:4700:3030::ac43:d6dd:443, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2718:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)
+      at process.processImmediate (node:internal/timers:483:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+Global error handler caught:  TypeError: fetch failed
+    at node:internal/deps/undici/undici:14902:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/LENOVO/OneDrive/Desktop/PaperTradingPlatform/backend/controllers/news.controller.js:16:22 {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 2606:4700:3030::ac43:d6dd:443, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2718:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)
+      at process.processImmediate (node:internal/timers:483:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+Global error handler caught:  TypeError: fetch failed
+    at node:internal/deps/undici/undici:14902:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/LENOVO/OneDrive/Desktop/PaperTradingPlatform/backend/controllers/news.controller.js:16:22 {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 2606:4700:3030::ac43:d6dd:443, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2718:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)
+      at process.processImmediate (node:internal/timers:483:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: connection <monitor> to 159.41.196.118:27017 timed out
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:545:9)
+    at process.processTimers (node:internal/timers:519:7)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:260:22)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: connection <monitor> to 159.41.196.118:27017 timed out
+      at Timeout._onTimeout (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connection.js:140:26)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(2) { 'ResetPool', 'InterruptInUseConnections' },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: connection <monitor> to 159.41.196.118:27017 timed out
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:545:9)
+    at process.processTimers (node:internal/timers:519:7)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:260:22)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: connection <monitor> to 159.41.196.118:27017 timed out
+      at Timeout._onTimeout (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connection.js:140:26)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(2) { 'ResetPool', 'InterruptInUseConnections' },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: connection <monitor> to 159.41.196.118:27017 timed out
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:545:9)
+    at process.processTimers (node:internal/timers:519:7)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:260:22)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: connection <monitor> to 159.41.196.118:27017 timed out
+      at Timeout._onTimeout (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connection.js:140:26)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(2) { 'ResetPool', 'InterruptInUseConnections' },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: connection <monitor> to 159.41.196.118:27017 timed out
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:260:22)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: connection <monitor> to 159.41.196.118:27017 timed out
+      at Timeout._onTimeout (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connection.js:140:26)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(2) { 'ResetPool', 'InterruptInUseConnections' },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Global error handler caught:  TypeError: fetch failed
+    at node:internal/deps/undici/undici:14902:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/LENOVO/OneDrive/Desktop/PaperTradingPlatform/backend/controllers/news.controller.js:16:22 {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 2606:4700:3030::ac43:d6dd:443, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2718:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)
+      at process.processImmediate (node:internal/timers:483:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: connection <monitor> to 159.41.196.118:27017 timed out
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: connection <monitor> to 159.41.196.118:27017 timed out
+      at Timeout._onTimeout (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connection.js:140:26)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(2) { 'ResetPool', 'InterruptInUseConnections' },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: connection <monitor> to 159.41.196.118:27017 timed out
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: connection <monitor> to 159.41.196.118:27017 timed out
+      at Timeout._onTimeout (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connection.js:140:26)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(2) { 'ResetPool', 'InterruptInUseConnections' },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+      at TLSSocket.<anonymous> (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connect.js:316:20)
+      at Object.onceWrapper (node:events:638:28)
+      at TLSSocket.emit (node:events:524:28)
+      at Socket._onTimeout (node:net:595:8)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(4) {
+      'SystemOverloadedError',
+      'RetryableError',
+      'ResetPool',
+      'InterruptInUseConnections'
+    },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:260:22)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+      at TLSSocket.<anonymous> (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connect.js:316:20)
+      at Object.onceWrapper (node:events:638:28)
+      at TLSSocket.emit (node:events:524:28)
+      at Socket._onTimeout (node:net:595:8)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(4) {
+      'SystemOverloadedError',
+      'RetryableError',
+      'ResetPool',
+      'InterruptInUseConnections'
+    },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:260:22)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+      at TLSSocket.<anonymous> (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connect.js:316:20)
+      at Object.onceWrapper (node:events:638:28)
+      at TLSSocket.emit (node:events:524:28)
+      at Socket._onTimeout (node:net:595:8)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(4) {
+      'SystemOverloadedError',
+      'RetryableError',
+      'ResetPool',
+      'InterruptInUseConnections'
+    },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+      at TLSSocket.<anonymous> (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connect.js:316:20)
+      at Object.onceWrapper (node:events:638:28)
+      at TLSSocket.emit (node:events:524:28)
+      at Socket._onTimeout (node:net:595:8)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(4) {
+      'SystemOverloadedError',
+      'RetryableError',
+      'ResetPool',
+      'InterruptInUseConnections'
+    },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}
+Global error handler caught:  TypeError: fetch failed
+    at node:internal/deps/undici/undici:14902:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/LENOVO/OneDrive/Desktop/PaperTradingPlatform/backend/controllers/news.controller.js:16:22 {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 2606:4700:3030::ac43:d6dd:443, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2718:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)
+      at process.processImmediate (node:internal/timers:483:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+Error updating stock prices in simulator: MongoServerSelectionError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+    at Topology.selectServer (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongoose\lib\query.js:2475:14) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-2evpdqi-shard-00-00.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-01.v4xfxy0.mongodb.net:27017' => [ServerDescription],
+      'ac-2evpdqi-shard-00-02.v4xfxy0.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-zdewow-shard-0',
+    maxElectionId: new ObjectId('7fffffff00000000000001b6'),
+    maxSetVersion: 226,
+    commonWireVersion: 25,
+    logicalSessionTimeoutMinutes: 30
+  },
+  code: undefined,
+  [cause]: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 31730ms (connectTimeoutMS: 30000)
+      at TLSSocket.<anonymous> (C:\Users\LENOVO\OneDrive\Desktop\PaperTradingPlatform\backend\node_modules\mongodb\lib\cmap\connect.js:316:20)
+      at Object.onceWrapper (node:events:638:28)
+      at TLSSocket.emit (node:events:524:28)
+      at Socket._onTimeout (node:net:595:8)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7) {
+    errorLabelSet: Set(4) {
+      'SystemOverloadedError',
+      'RetryableError',
+      'ResetPool',
+      'InterruptInUseConnections'
+    },
+    beforeHandshake: false,
+    [cause]: undefined
+  }
+}

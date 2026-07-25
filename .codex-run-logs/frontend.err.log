@@ -1,0 +1,146 @@
+[2m10:24:51 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://127.0.0.1:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://127.0.0.1:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:25:52 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://127.0.0.1:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://127.0.0.1:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:30:00 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:30:23 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://127.0.0.1:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://127.0.0.1:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:33:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:44:17 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:44:28 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:44:38 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:50:43 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m10:57:22 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m11:04:22 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch news AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:1838:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=fd87450b:2231:4)
+[2m9:00:01 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mTypeError[22m: RefreshRuntime.register is not a function
+[39m > $RefreshReg$ src/components/navbar/NavbarItem.jsx:55:57
+    
+ > src/components/navbar/NavbarItem.jsx:34:1
+
+[2m11:53:42 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:53:42 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:53:42 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mTypeError[22m: Cannot read properties of null (reading 'useMemo')
+[39m > exports.useMemo node_modules/react/cjs/react.development.js:1251:33
+ > Provider node_modules/react-redux/dist/react-redux.mjs:877:29
+ > react-stack-bottom-frame node_modules/.vite/deps/react-dom_client.js?v=05f412e9:17424:20
+ > renderWithHooks node_modules/react-dom/cjs/react-dom-client.development.js:7634:6
+ > updateFunctionComponent node_modules/react-dom/cjs/react-dom-client.development.js:13260:16
+ > beginWork node_modules/react-dom/cjs/react-dom-client.development.js:15607:18
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1948:10
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:22701:6
+ > workLoopSync node_modules/react-dom/cjs/react-dom-client.development.js:22460:28
+ > renderRootSync node_modules/react-dom/cjs/react-dom-client.development.js:22430:4
+
+[2m11:53:42 PM[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mAn error occurred in the <Provider> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+[2m11:56:46 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:56:46 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:56:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mTypeError[22m: Cannot read properties of null (reading 'useMemo')
+[39m > exports.useMemo node_modules/react/cjs/react.development.js:1251:33
+ > Provider node_modules/react-redux/dist/react-redux.mjs:877:29
+ > react-stack-bottom-frame node_modules/.vite/deps/react-dom_client.js?v=05f412e9:17424:20
+ > renderWithHooks node_modules/react-dom/cjs/react-dom-client.development.js:7634:6
+ > updateFunctionComponent node_modules/react-dom/cjs/react-dom-client.development.js:13260:16
+ > beginWork node_modules/react-dom/cjs/react-dom-client.development.js:15607:18
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1948:10
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:22701:6
+ > workLoopSync node_modules/react-dom/cjs/react-dom-client.development.js:22460:28
+ > renderRootSync node_modules/react-dom/cjs/react-dom-client.development.js:22430:4
+
+[2m11:56:47 PM[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mAn error occurred in the <Provider> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+[2m11:46:26 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:46:26 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:46:26 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mTypeError[22m: Cannot read properties of null (reading 'useMemo')
+[39m > exports.useMemo node_modules/react/cjs/react.development.js:1251:33
+ > Provider node_modules/react-redux/dist/react-redux.mjs:877:29
+ > react-stack-bottom-frame node_modules/.vite/deps/react-dom_client.js?v=05f412e9:17424:20
+ > renderWithHooks node_modules/react-dom/cjs/react-dom-client.development.js:7634:6
+ > updateFunctionComponent node_modules/react-dom/cjs/react-dom-client.development.js:13260:16
+ > beginWork node_modules/react-dom/cjs/react-dom-client.development.js:15607:18
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1948:10
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:22701:6
+ > workLoopSync node_modules/react-dom/cjs/react-dom-client.development.js:22460:28
+ > renderRootSync node_modules/react-dom/cjs/react-dom-client.development.js:22430:4
+
+[2m11:46:26 AM[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mAn error occurred in the <Provider> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+[2m11:50:58 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:50:58 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mInvalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[2m11:50:59 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mTypeError[22m: Cannot read properties of null (reading 'useMemo')
+[39m > exports.useMemo node_modules/react/cjs/react.development.js:1251:33
+ > Provider node_modules/react-redux/dist/react-redux.mjs:877:29
+ > react-stack-bottom-frame node_modules/.vite/deps/react-dom_client.js?v=05f412e9:17424:20
+ > renderWithHooks node_modules/react-dom/cjs/react-dom-client.development.js:7634:6
+ > updateFunctionComponent node_modules/react-dom/cjs/react-dom-client.development.js:13260:16
+ > beginWork node_modules/react-dom/cjs/react-dom-client.development.js:15607:18
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1948:10
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:22701:6
+ > workLoopSync node_modules/react-dom/cjs/react-dom-client.development.js:22460:28
+ > renderRootSync node_modules/react-dom/cjs/react-dom-client.development.js:22430:4
+
+[2m11:50:59 AM[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mAn error occurred in the <Provider> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+

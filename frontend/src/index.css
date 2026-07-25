@@ -39,3 +39,35 @@ body {
 .animate-slide-left {
   animation: slide-left 0.4s ease-out forwards;
 }
+
+/* react-phone-input-2 dark mode overrides */
+.dark .react-tel-input .flag-dropdown {
+  background-color: #2b2b40 !important;
+  border-color: #374151 !important;
+}
+
+.dark .react-tel-input .selected-flag {
+  background-color: transparent !important;
+}
+
+.dark .react-tel-input .selected-flag:hover,
+.dark .react-tel-input .selected-flag:focus {
+  background-color: #1e1e2d !important;
+}
+
+.dark .react-tel-input .country-list {
+  background-color: #2b2b40 !important;
+  border-color: #374151 !important;
+}
+
+.dark .react-tel-input .country-list .country {
+  color: #f3f4f6 !important;
+}
+
+.dark .react-tel-input .country-list .country:hover {
+  background-color: #1e1e2d !important;
+}
+
+.dark .react-tel-input .country-list .country.highlight {
+  background-color: #1e1e2d !important;
+}

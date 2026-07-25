@@ -20,7 +20,15 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     const rawToken = localStorage.getItem('accessToken');
-    const accessToken = rawToken ? JSON.parse(rawToken) : null;
+    let accessToken = null;
+    
+    if (rawToken) {
+      try {
+        accessToken = JSON.parse(rawToken);
+      } catch (e) {
+        accessToken = rawToken;
+      }
+    }
 
 
     if (accessToken) {
@@ -51,7 +59,15 @@ axiosInstance.interceptors.response.use(
 
       try {
         const rawRefreshToken = localStorage.getItem('refreshToken');
-        const refreshToken = rawRefreshToken ? JSON.parse(rawRefreshToken) : null;
+        let refreshToken = null;
+        
+        if (rawRefreshToken) {
+          try {
+            refreshToken = JSON.parse(rawRefreshToken);
+          } catch (e) {
+            refreshToken = rawRefreshToken;
+          }
+        }
 
 
         if (!refreshToken) {

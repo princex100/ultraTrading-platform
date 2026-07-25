@@ -36,6 +36,11 @@ const userSchema = new Schema(
             type: String,
             required: true
         },
+        countryCode:{
+            type: String,
+            required: true,
+            default:"+91"
+        },
         refreshToken:{
             type: String,
         },

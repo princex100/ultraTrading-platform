@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { Navigate } from 'react-router-dom';
 
 // Layouts
 import MainLayout from './layouts/MainLayout';
@@ -31,6 +31,7 @@ import { io } from 'socket.io-client';
 import axiosInstance from './services/axios';
 import { setUser, logout } from './redux/userSlice';
 import VerifyEmail from './pages/verify-email';
+import Reviews from './components/landing/Reviews.jsx';
 
 
 
@@ -43,6 +44,7 @@ function App() {
 
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme?.theme || 'light');
+  const user = useSelector((state) => state.user?.user || null);
 
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
@@ -93,19 +95,23 @@ function App() {
     const fetchCurrentUser = async () => {
 
       try {
-        const hasSavedSession = localStorage.getItem('accessToken') || localStorage.getItem('refreshToken');
+        // const hasSavedSession = localStorage.getItem('accessToken') || localStorage.getItem('refreshToken');
 
-        if (!hasSavedSession) {
+        // if (!hasSavedSession) {
+        //   dispatch(logout());
+        //   return;
+        // }
+
+        const response = await axiosInstance.get('/users/current-user');
+        if(!response.data.success){
           dispatch(logout());
           return;
         }
-
-        const response = await axiosInstance.get('/users/current-user');
         const responseData = response.data;
 
 
         if (responseData.success) {
-          dispatch(setUser(responseData.data));
+          dispatch(setUser(responseData.data.user));
         }
 
       } catch (error) {
@@ -160,17 +166,27 @@ function App() {
       <Notification />
       <Routes>
 
-        <Route path="/" element={<LandingPage />} />
+        
 
-        <Route element={<AuthLayout />}>
+        {/* <Route element={<AuthLayout />}>
+
+        <Route path="/" element={<LandingPage />} >
+          <Route path='/' element={<Reviews/>}/>
+           <Route path="/about" element={<About />} />
+           <Route path="/reviews" element={<Reviews />} />
+
+            <Route path="/docs" element={<Docs />} /> */}
+        {/* </Route> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-        </Route>
+        {/* </Route> */}
   
          <Route path='/verify-email' element={<VerifyEmail/>}/>
 
+        
         <Route element={<MainLayout />}>
-          <Route path="/home" element={<Home />} />
+
+          <Route path="/home" element={<Home/>} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/holdings" element={<Holdings />} />
           <Route path="/watchlist" element={<Watchlist />} />

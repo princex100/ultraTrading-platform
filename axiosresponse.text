@@ -1,0 +1,21 @@
+const response = await axios.get("/api/users/me");
+
+
+//////////////////////////////////////////////response roughly looks like:
+
+{
+  data: {
+    success: true,
+    message: "User fetched successfully",
+    user: {
+      name: "Prince",
+      email: "prince@example.com"
+    }
+  },
+
+  status: 200,
+  statusText: "OK",
+  headers: {},
+  config: {},
+  request: {}
+}
