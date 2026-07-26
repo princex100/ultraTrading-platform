@@ -74,8 +74,11 @@ const Register = () => {
 
       const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/google`,{
         token:googleToken
+      },{
+        withCredentials:true
       })
-
+      
+      console.log(res.data.data)
       if(res.status===200){
         dispatch(setUser(res.data.data))
         // localStorage.setItem("accessToken",res.data.data.accessToken)

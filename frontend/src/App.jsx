@@ -92,42 +92,7 @@ function App() {
 
     
 
-    const fetchCurrentUser = async () => {
-
-      try {
-        // const hasSavedSession = localStorage.getItem('accessToken') || localStorage.getItem('refreshToken');
-
-        // if (!hasSavedSession) {
-        //   dispatch(logout());
-        //   return;
-        // }
-
-        const response = await axiosInstance.get('/users/current-user');
-        if(!response.data.success){
-          dispatch(logout());
-          return;
-        }
-        const responseData = response.data;
-
-
-        if (responseData.success) {
-          dispatch(setUser(responseData.data.user));
-        }
-
-      } catch (error) {
-
-        dispatch(logout());
-        if (error?.response?.status !== 401 && error?.message !== 'Session expired. Please login again.') {
-          console.error(error);
-        }
-
-      } finally {
-
-        setIsCheckingAuth(false);
-
-      }
-    }
-    fetchCurrentUser();
+    
 
 
  socket.on("stock", (data) => {
@@ -145,14 +110,7 @@ function App() {
   }, []);
 
 
-  if (isCheckingAuth) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#f3f2ef] dark:bg-[#111111] text-gray-900 dark:text-gray-100 transition-colors duration-200">
-        <p className="text-lg font-medium">Loading......</p>
-      </div>
-    );
-  }
-
+  
 
   
     // useEffect(() => {
@@ -168,18 +126,18 @@ function App() {
 
         
 
-        {/* <Route element={<AuthLayout />}>
+        <Route element={<AuthLayout />}>
 
         <Route path="/" element={<LandingPage />} >
           <Route path='/' element={<Reviews/>}/>
            <Route path="/about" element={<About />} />
            <Route path="/reviews" element={<Reviews />} />
 
-            <Route path="/docs" element={<Docs />} /> */}
-        {/* </Route> */}
+            <Route path="/docs" element={<Docs />} />
+        </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-        {/* </Route> */}
+        </Route>
   
          <Route path='/verify-email' element={<VerifyEmail/>}/>
 

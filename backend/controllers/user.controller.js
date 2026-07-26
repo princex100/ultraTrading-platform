@@ -317,7 +317,7 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
 
         const options = {
             httpOnly: true,
-            secure: true
+            secure: false
         };
 
         const {accessToken,refreshToken } = await generateAcessAndRefreshTokens(user._id);
@@ -446,13 +446,15 @@ export const googleOauth=asyncHandler(async(req,res,next)=>{
 
     const options={
         httpOnly:true,
-        secure:true,
-        sameSite:"none"
+        secure:false,
+        // sameSite:"none"
     }
-
+   
+    
     const userResponse = user.toObject ? user.toObject() : user;
     userResponse.accessToken = accessToken;
     userResponse.refreshToken = refreshToken;
+console.log(userResponse);
 
     return res
         .status(200)
